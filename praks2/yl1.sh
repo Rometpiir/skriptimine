@@ -1,7 +1,8 @@
 #!/bin/bash
-# Skript väljastab kasutajale tervituse "Tere, Kasutajanimi !"
+# Skript väljastab tervituse koos suure algustähega kasutajanimega
 
 echo -n "Tere, "
-kasutaja=$(whoami)
+raw_user=$(whoami)
+kasutaja="${raw_user^}" # Muudab esimese tähe suureks
 echo -n "$kasutaja"
-echo "!"
+echo " !"
