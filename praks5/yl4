@@ -1,0 +1,18 @@
+#!/bin/bash
+# Skript tervitab kasutajat automaatselt süsteemi kellaaja ja kasutajanime põhjal.
+
+tund=$(date +%H)
+kasutaja=$(whoami)
+
+if [ $tund -ge 6 ] && [ $tund -lt 12 ]
+then
+    echo "Tere hommikust, $kasutaja!"
+elif [ $tund -ge 12 ] && [ $tund -lt 18 ]
+then
+    echo "Tere päevast, $kasutaja!"
+elif [ $tund -ge 18 ] && [ $tund -lt 22 ]
+then
+    echo "Tere õhtust, $kasutaja!"
+else
+    echo "Head ööd, $kasutaja!"
+fi
